@@ -1,12 +1,10 @@
 const express = require("express");
 const app = express();
+const port = process.env.port || 3000;
 
-app.get("/", (req, res) => {
-  res.send("Rachel Bowden");
+app.use("/", require("./routes"));
+
+app.listen(port, () => {
+  console.log("web server is listening at port " + port);
+  console.log("http://localhost:${port}/");
 });
-
-const port = 3000;
-
-app.listen(process.env.port || port);
-console.log("web server is listening at port " + port);
-console.log(`http://localhost:${port}/`);
