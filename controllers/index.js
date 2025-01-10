@@ -1,7 +1,5 @@
-const { get } = require("../routes");
-
 const getName = (req, res) => {
-  res.send("Rachel Bowden");
+  res.send("Daniel Bowden");
 };
 
 module.exports = { getName };
